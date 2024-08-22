@@ -6,12 +6,14 @@
   "scripts": {
     "start": "node server.js",
     "server": "nodemon server",
+    "vercel-build": "npm install --legacy-peer-deps && npm run build",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "dependencies": {
     "@material-ui/core": "^4.12.4",
+    "@mui/material": "^5.16.7",
     "bcryptjs": "^2.4.3",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
@@ -21,8 +23,8 @@
     "mongodb": "^6.8.0",
     "mongoose": "^5.11.16",
     "multer": "^1.4.5-lts.1",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-google-login": "^5.2.2",
     "react-toastify": "^8.1.0"
   },
